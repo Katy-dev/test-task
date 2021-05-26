@@ -1,0 +1,92 @@
+@import '../styles.scss';
+
+.wrapper {
+  @extend %container;
+
+  .space_block {
+    background-color: $lightRed;
+
+    & span {
+      height: 3rem;
+      display: block;
+    }
+  }
+
+  .space_block + span {
+    background-color: $lightPurple;
+    height: 2rem;
+    display: block;
+  }
+
+  .title {
+    text-transform: capitalize;
+    color: $darkGrey;
+    font-weight: $bold;
+    font-size: $font_32px;
+    line-height: $lineHeight40px;
+  }
+
+  .title + span,
+  .second_line {
+    background-color: $lightBlue;
+    display: block;
+    height: 2rem;
+  }
+
+  .list_directory {
+    display: grid;
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+
+    .first_line {
+      background-color: $lightGreen;
+      height: 0.75rem;
+      display: block;
+    }
+
+    .title_directory {
+      font-weight: $medium;
+      font-size: $font_24px;
+      line-height: $lineHeight24px;
+      color: $darkGrey;
+    }
+
+    .third_line {
+      background-color: $mind;
+      height: 1rem;
+      display: block;
+    }
+  }
+
+}
+
+@include mobile {
+  .wrapper {
+    .space_block {
+      background-color: $white;
+      & span {
+        height: 1.5rem;
+      }
+    }
+    .space_block + span {
+      background-color: $white;
+      height: 1rem;
+    }
+    .title + span {
+      background-color: $white;
+      height: 1.75rem;
+    }
+    .list_directory {
+      max-width: 420px;
+      display: none;
+    }
+
+    .slide {
+      width: 50px;
+      height: auto;
+      background-color: green;
+    }
+  }
+}
+

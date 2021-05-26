@@ -1,0 +1,15 @@
+@import '../../../styles';
+
+.error_wrapper {
+  padding: 0 0.5rem;
+  .error_message {
+    color: $red;
+    text-align: left;
+  }
+}
+
+@include mobile {
+  .error_message {
+    font-size: $font_10px;
+  }
+}

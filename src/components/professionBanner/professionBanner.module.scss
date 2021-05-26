@@ -1,0 +1,97 @@
+@import '../styles.scss';
+
+.profession_wrapper {
+  margin-top: 8.875rem;
+  padding: 0 1rem;
+  @extend %container;
+
+  & h2 {
+    font-weight: $bold;
+    font-size: $font_32px;
+    line-height: $lineHeight40px;
+    color: $darkGrey;
+    text-align: center;
+  }
+
+  .spacing_before_slide {
+    width: 1.5rem;
+  }
+
+  .slider {
+    padding: 2rem 0 0.875rem 0;
+      .slide {
+        padding: 0 1rem;
+          .slide img {
+            width: 100%;
+      }
+
+    }
+
+    & h5 {
+      font-size: $font_18px;
+      line-height: 28px;
+      font-weight: $medium;
+      color: $darkGrey;
+    }
+
+    .spacing {
+      height: 1rem;
+      display: block;
+    }
+
+    .slick-active > .spacing {
+      background-color: $mind;
+    }
+  }
+
+}
+
+.arrow {
+  z-index: 10;
+  @extend %position-center;
+}
+
+.button__bar {
+  display: inline-block;
+  vertical-align: middle;
+  margin: auto;
+  padding-top: 14px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 40px;
+  text-align: center;
+}
+
+.button__bar li {
+  list-style: none;
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 3px;
+  padding: 0;
+}
+
+.button__bar li button {
+  border: none;
+  background-image: linear-gradient(236.84deg, #9C8BEA 1.49%, #544695 105.35%);
+  opacity: 0.3;
+  color: transparent;
+  cursor: pointer;
+  display: block;
+  height: 8px;
+  width: 8px;
+  border-radius: 7.5px;
+}
+
+.button__bar :global(li.slick-active) button {
+  height: 10px;
+  width: 10px;
+  opacity: 1;
+  color: transparent;
+}
+
+@include mobile {
+  .spacing_before_slide {
+    background-color: $lightBlue;
+  }
+}
+
+

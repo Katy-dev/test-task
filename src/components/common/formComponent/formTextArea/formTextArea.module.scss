@@ -1,0 +1,22 @@
+@import '../../../styles';
+
+.container {
+  margin-bottom: 3rem;
+  .notes_wrapper {
+    width: 100%;
+    font-weight: $regular;
+    background-color: transparent;
+    padding: 10px 0 0 16px;
+    margin-bottom: 16px;
+    outline: none;
+    color: rgba(139, 146, 171, 1);
+    border-bottom: $border;
+  }
+  .wrapper_error {
+    color: $red;
+    padding: 0.5rem;
+  }
+}
+
+@include mobile {
+}

@@ -1,0 +1,46 @@
+@import '../styles.scss';
+
+.wrapper {
+  margin-top: 4.5rem;
+  min-height: 568px;
+  .wrapper_content{
+    @extend %container;
+    padding: 0.625rem;
+  }
+    .content {
+      color: white;
+      padding-top: 6.5rem;
+      max-width: 33rem;
+      text-align: left;
+      font-size: $font_16px;
+      line-height: $lineHeight24px;
+      font-weight: $regular;
+      .title {
+          font-size: $font_48px;
+          font-weight: $bold;
+          line-height: $lineHeight56px;
+        }
+        & p {
+          padding: 24px 0 32px 0;
+          max-width: 26rem;
+        }
+    }
+}
+
+@include mobile {
+  .wrapper {
+  .content {
+    padding: 24px 10px 32px 10px;
+    .title {
+        font-size: $font_28px;
+        font-weight: $bold;
+        line-height: $lineHeight32px;
+      }
+        & p {
+          font-size: $font_14px;
+          line-height: $lineHeight24px;
+        }
+  }
+  }
+}
+

@@ -1,0 +1,21 @@
+/* Responsive media queries:
+  ========================================================================== */
+
+$small: 421px;
+$extra-large: 1366px;
+
+@mixin mobile {
+
+  /*   <= 420px   */
+  @media (max-width: #{$small - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+
+  /*  >= 1366px   */
+  @media (min-width: #{$extra-large}) {
+    @content;
+  }
+}

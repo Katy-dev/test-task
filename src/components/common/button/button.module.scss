@@ -1,0 +1,15 @@
+@import '../../styles.scss';
+
+.button_wrapper {
+  box-shadow: -4px 4px 15px rgba(129, 103, 227, 0.2);
+  border-radius: 50px;
+  background-image: linear-gradient(236.84deg, #9C8BEA 1.49%, #544695 105.35%);
+  width: 204px;
+  padding: 10px 40px 10px 40px;
+  cursor: pointer;
+    & a {
+      color: white;
+      font-size: $font_18px;
+      line-height: $lineHeight28px;
+    }
+}
